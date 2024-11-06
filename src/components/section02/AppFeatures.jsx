@@ -22,7 +22,6 @@ const AppFeatures = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
             </div>
             <div className="tron-city">
-
               {/* Easy Payments */}
               <div className="app-features-container">
                 <div className="app-features-icon">
@@ -33,7 +32,6 @@ const AppFeatures = () => {
                   <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
                 </div>
               </div>
-
               {/* Data Security */}
               <div className="app-features-container">
                 <div className="app-features-icon">
@@ -44,7 +42,6 @@ const AppFeatures = () => {
                   <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
                 </div>
               </div>
-
               {/* <Cost Statistics */}
               <div className="app-features-container">
                 <div className="app-features-icon">
@@ -55,7 +52,6 @@ const AppFeatures = () => {
                   <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
                 </div>
               </div>
-
               {/* Support 24/7 */}
               <div className="app-features-container">
                 <div className="app-features-icon">
@@ -66,7 +62,6 @@ const AppFeatures = () => {
                   <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
                 </div>
               </div>
-
               {/* Regular Cashback */}
               <div className="app-features-container">
                 <div className="app-features-icon">
@@ -77,7 +72,6 @@ const AppFeatures = () => {
                   <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
                 </div>
               </div>
-
               {/* Top Standards */}
               <div className="app-features-container">
                 <div className="app-features-icon">
@@ -88,7 +82,6 @@ const AppFeatures = () => {
                   <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

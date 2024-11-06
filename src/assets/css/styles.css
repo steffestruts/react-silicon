@@ -582,7 +582,7 @@ input:checked + .slider:before {
 
 
 .faq-and-newsletter {
-  margin-top: 7rem;
+  padding-block: 7rem;
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
