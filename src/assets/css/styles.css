@@ -1,5 +1,13 @@
 :root {
 
+/*   @media (prefers-color-scheme: dark) {
+    .theme-a.adaptive {
+      background: #753;
+      color: #dcb;
+      outline: 5px dashed #000;
+    }
+  } */
+
   /* Grayscale */
   --gray-100: #F3F6FF;
   --gray-200: #EFF2FC;
@@ -36,7 +44,6 @@
   --s-text: .875rem;
   --xs-text: .75rem;
 
-
   /* Shadow */
   --small-shadow-1: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
   --small-shadow-2: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
@@ -62,6 +69,14 @@
   --heading4: 1.5rem;
   --heading5: 1.25rem;
   --heading6: 1rem;
+}
+
+:root[data-theme="dark"] {
+  --primary: #000;
+}
+
+:root[data-theme="light"] {
+  --primary: #eee;
 }
 
 /* -------------------------------- */
@@ -721,9 +736,12 @@ input:checked + .slider:before {
     color: var(--gray-500);
     font-size: var(--m-text);
     height: 52px;
+    max-width: 300px;
     padding: .75rem .75rem .75rem 3rem;
   }
-
+  form {
+    display: flex;
+  }
   .btn-subscribe {
     background-color: var(--primary);
     border: none;

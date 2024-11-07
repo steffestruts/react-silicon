@@ -29,9 +29,7 @@ const FAQ = () => {
               </div>
             </div>
           </div>
-          <div className="faq-and-newsletter-accordion">
-            <AccordionList/>
-          </div>
+          <AccordionList/>
       </div>
     </section>
   )

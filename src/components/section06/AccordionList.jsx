@@ -1,24 +1,27 @@
 import React, {useEffect, useState} from 'react'
-import AccordionItem from './AccordionItem'
 
 const AccordionList = () => {
-  const [accordionItems, setSetaccordionItems] = useState([]);
-
-const fetchData = async () => {
-  const res = await fetch ('https://win24-assignment.azurewebsites.net/api/faq');
-  const data = await res.json();
-  setSetaccordionItems(data);
-}
+  const [accordionData, setSetaccordionData] = useState([]);
 
   useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch ('https://win24-assignment.azurewebsites.net/api/faq');
+      const data = await res.json();
+      setSetaccordionData(data);
+    }
+
     fetchData();
   }, []);
-  
+    
   return (
-    <div className="accordion-container">
-        {
-          accordionItems.map((faq, index) => (<AccordionItem key={faq.id}/>))
-        }
+    
+    <div className="faq-and-newsletter-accordion">
+        {accordionData.map((faq, index) => (
+          <div className="accordion-container"  key={faq.id}>
+            <button className="accordion">{faq.title}<div className="chevron"></div></button>
+            <div className="panel"><p>{faq.content}</p></div>
+          </div>
+        ))}
     </div>
   )
 }

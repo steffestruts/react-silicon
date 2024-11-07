@@ -4,9 +4,9 @@ import OneAppExplanation from './components/section01/OneAppExplanation'
 import AppFeatures from './components/section02/AppFeatures'
 import HowDoesItWork from './components/section03/HowDoesItWork'
 import TransferSimple from './components/section04/TransferSimple'
-import Testomonial from './components/section05/Testomonial'
-import FAQ from './components/FAQ'
-import Newsletter from './components/Newsletter'
+import Testomonial from './components/section05/Testimonial'
+import FAQ from './components/section06/FAQ'
+import Newsletter from './components/section06/Newsletter'
 import Footer from './components/section07/Footer'
 
 function App() {
