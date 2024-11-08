@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
 
 const AccordionList = () => {
-  const [accordionData, setSetaccordionData] = useState([]);
+  const [accordionData, setAccordionData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch ('https://win24-assignment.azurewebsites.net/api/faq');
       const data = await res.json();
-      setSetaccordionData(data);
+      setAccordionData(data);
     }
 
     fetchData();
