@@ -1,770 +1,809 @@
 :root {
-
-/*   @media (prefers-color-scheme: dark) {
-    .theme-a.adaptive {
-      background: #753;
-      color: #dcb;
-      outline: 5px dashed #000;
-    }
+  
+    /* Grayscale */
+    --gray-100: #F3F6FF;
+    --gray-200: #EFF2FC;
+    --gray-300: #E2E5F1;
+    --gray-400: #D4D7E5;
+    --gray-500: #B4B7C9;
+    --gray-600: #9397AD;
+    --gray-700: #565973;
+    --gray-800: #33354D;
+    --gray-900: #0B0F19;
+  
+    /* Brand/Gradient (Color name: https://colors.artyclick.com/color-name-finder/) */
+    --primary: #6366F1;
+    --gradient-blue-lotus: #6366F1;
+    --gradient-lavender-indigo: #8B5CF6;
+    --gradient-pinkish-purple: #D946EF;
+    --standard-color: #ffffff;
+  
+    /* Radius */
+    --border-radius-m: .375em;
+    --border-radius-l: .5em;
+  
+    /* System */
+    --error: #EF4444;
+    --success: #22C55E;
+    --warning: #FFBA08;
+    --info: #4C82F7;
+  
+    /* Font-size */
+    --lead-text: 1.5rem;
+    --xl-text: 1.25rem;
+    --l-text: 1.125rem;
+    --m-text: 1rem;
+    --s-text: .875rem;
+    --xs-text: .75rem;
+  
+    /* Shadow */
+    --small-shadow-1: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+    --small-shadow-2: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    --medium-shadow-1: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+    --medium-shadow-2: 0px 4px 9px -1px rgba(19, 16, 34, 0.03);
+    --large-shadow-1: 0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
+    --large-shadow-2: 0px 4px 13px -2px rgba(19, 16, 34, 0.06);
+    --brand-btn: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
+    --secondary: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
+  
+    /* Display */
+    --display1: 5rem;
+    --display2: 4.2rem;
+    --display3: 4rem;
+    --display4: 3.5rem;
+    --display5: 3rem;
+    --display6: 2.625rem;
+  
+    /* Headings */
+    --heading1: 2.5rem;
+    --heading2: 2rem;
+    --heading3: 1.75rem;
+    --heading4: 1.5rem;
+    --heading5: 1.25rem;
+    --heading6: 1rem;
+  }
+  
+/*   :root[data-theme="dark"] {
+    --primary: #000;
+  }
+  
+  :root[data-theme="light"] {
+    --primary: #eee;
   } */
 
-  /* Grayscale */
-  --gray-100: #F3F6FF;
-  --gray-200: #EFF2FC;
-  --gray-300: #E2E5F1;
-  --gray-400: #D4D7E5;
-  --gray-500: #B4B7C9;
-  --gray-600: #9397AD;
-  --gray-700: #565973;
-  --gray-800: #33354D;
-  --gray-900: #0B0F19;
+  /* ------ Dark Mode ------------- */
 
-  /* Brand/Gradient (Color name: https://colors.artyclick.com/color-name-finder/) */
-  --primary: #6366F1;
-  --gradient-blue-lotus: #6366F1;
-  --gradient-lavender-indigo: #8B5CF6;
-  --gradient-pinkish-purple: #D946EF;
-  --standard-color: #ffffff;
-
-  /* Radius */
-  --border-radius-m: .375em;
-  --border-radius-l: .5em;
-
-  /* System */
-  --error: #EF4444;
-  --success: #22C55E;
-  --warning: #FFBA08;
-  --info: #4C82F7;
-
-  /* Font-size */
-  --lead-text: 1.5rem;
-  --xl-text: 1.25rem;
-  --l-text: 1.125rem;
-  --m-text: 1rem;
-  --s-text: .875rem;
-  --xs-text: .75rem;
-
-  /* Shadow */
-  --small-shadow-1: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
-  --small-shadow-2: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-  --medium-shadow-1: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
-  --medium-shadow-2: 0px 4px 9px -1px rgba(19, 16, 34, 0.03);
-  --large-shadow-1: 0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
-  --large-shadow-2: 0px 4px 13px -2px rgba(19, 16, 34, 0.06);
-  --brand-btn: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
-  --secondary: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
-
-  /* Display */
-  --display1: 5rem;
-  --display2: 4.2rem;
-  --display3: 4rem;
-  --display4: 3.5rem;
-  --display5: 3rem;
-  --display6: 2.625rem;
-
-  /* Headings */
-  --heading1: 2.5rem;
-  --heading2: 2rem;
-  --heading3: 1.75rem;
-  --heading4: 1.5rem;
-  --heading5: 1.25rem;
-  --heading6: 1rem;
-}
-
-:root[data-theme="dark"] {
-  --primary: #000;
-}
-
-:root[data-theme="light"] {
-  --primary: #eee;
-}
-
-/* -------------------------------- */
-
-*, ::before, ::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  color: var(--gray-900);
-  font-weight: 800;
-  text-wrap: balance;
-}
-
-h1 {font-size: var(--heading1); line-height: 1.3;}
-h2 {font-size: var(--heading2); line-height: 1.3;}
-h3 {font-size: var(--heading3); line-height: 1.3;}
-h4 {font-size: var(--heading4); line-height: 1.4;}
-h5 {font-size: var(--heading5); line-height: 1.4;}
-h6 {font-size: var(--heading6); line-height: 1.4;}
-
-.display1 {font-size: var(--display1); font-weight: 800; line-height: 1.3;}
-.display2 {font-size: var(--display2); font-weight: 800; line-height: 1.3;}
-.display3 {font-size: var(--display3); font-weight: 800; line-height: 1.3;}
-.display4 {font-size: var(--display4); font-weight: 800; line-height: 1.3;}
-.display5 {font-size: var(--display5); font-weight: 800; line-height: 1.3;}
-.display6 {font-size: var(--display6); font-weight: 800; line-height: 1.3;}
-
-html {
-  /* Adds padding so scroll-behavior stops with some margin from browser top view edge */
-  scroll-padding: 2rem;
-  /* Smoother scroll */
-  scroll-behavior: smooth;
-}
-
-body {
-  color: var(--gray-700);
-  font-family: "Manrope", sans-serif;
-  line-height: 1.6;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1296px;
-  padding-inline: 1rem;
-  width: 100%;
-}
-
-section:nth-child(2n+3) {
-  /* Applying background-color on every second section with a offset/start on the third section. */
-  background-color: var(--gray-100);
-}
-
-/* The Grid */
-
-.tron-city {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-/* First section: Manage One App */
-
-nav {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding-block: 1rem;
-  width: 100%;
-  a {
-    color: var(--gray-800);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  a:hover {
-    color: var(--primary);
-    text-decoration: underline;
-  }
-}
-
-.main-menu-left a {
-  margin-left: 3rem;
-}
-
-.main-menu-left, .main-menu-right {
-  align-items: center;
-  display: flex;
-}
-
-/* Slider/Switch credit W3Schools: https://www.w3schools.com/howto/howto_css_switch.asp */
-
-.dark-mode-switch-span {
-  color: var(--gray-700);
-  font-weight: 600;
-  margin-right: 1rem;
-}
-
-.switch {
-  display: inline-block;
-  height: 24px;
-  position: relative;
-  width: 46px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  height: 0;
-  opacity: 0;
-  width: 0;
-}
-
-/* The slider */
-.slider {
-  background-color: var(--gray-600);
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
-  -webkit-transition: .4s;
-}
-
-.slider:before {
-  background-color: var(--standard-color);
-  bottom: 2px;
-  content: "";
-  height: 20px;
-  left: 2px;
-  position: absolute;
-  width: 20px;
-  transition: .4s;
-  -webkit-transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: var(--primary);
-}
-
-input:checked + .slider:before {
-  transform: translateX(22px);
-  -ms-transform: translateX(22px);
-  -webkit-transform: translateX(22px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.btn-signin {
-  align-items: center;
-  background-color: var(--primary);
-  border-radius: var(--border-radius-m);
-  color: var(--standard-color);
-  display: flex;
-  font-size: var(--s-text);
-  font-weight: 600;
-  height: 36px;
-  line-height: 1.8;
-  justify-content: center;
-  margin-left: 2rem;
-  text-decoration: none;
-  width: 140px;
-  span {
-    margin-left: .5rem;
-  }
-}
-
-.btn-signin:hover {
-  background-color: var(--standard-color);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  text-decoration: none;
-  img {
-    /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
-    filter: brightness(0) saturate(100%) invert(38%) sepia(91%) saturate(2677%) hue-rotate(225deg) brightness(98%) contrast(92%);
-  }
-}
-
-.manage-one-app {
-  background: #4C82F7;
-  background: rgb(99,102,241);
-  background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
-  margin-bottom: 6rem;
-  padding-top: 7rem;
-}
-
-.one-app-explanation {
-  font-size: 1.125rem;
-  grid-column: 1 / 3;
-  position: relative;
-  text-wrap: balance;
-  .display4 {
-    margin-bottom: 1.5rem;
-  }
-  p {
-    margin-bottom: 3rem;
-  }
-  a + a {
-    margin-left: 1.5rem;
-  }
-}
-
-.discover-more-btn {
-  align-items: center;
-  bottom: 4rem;
-  color: var(--gray-700);
-  cursor: pointer;
-  display: flex;
-  font-size: var(--s-text);
-  position: absolute;
-  text-decoration: none;
-  &:hover {
-    .discover-more-btn-chevron {
-      background-color: var(--primary);
-      img {
-        /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
-        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4488%) hue-rotate(138deg) brightness(116%) contrast(105%);
+  .dark {
+    background-color: var(--gray-900);
+    section:nth-child(2n+3) {
+      /* Applying background-color on every second section with a offset/start on the third section. */
+      background-color: black;
+    }
+    h1, h2, h3, h4, h5, h6, a {
+      color: var(--standard-color);
+    }
+    section {
+      p {
+        color: var(--gray-100);
+      }
+    }
+    .app-features-container > .app-features-icon {
+      background-color: rgba(99, 102, 241, .08);
+    }
+    .testimonial-client {
+      background-color: var(--gray-900);
+      color: var(--standard-color);
+      p {
+        color: var(--standard-color);
+      }
+    }
+    .faq-and-newsletter-contact-phone, .faq-and-newsletter-contact-chat {
+      border: 1px solid rgb(255, 255, 255, .15);
+      color: var(--standard-color);
+    }
+    .accordion {
+      background-color: var(--gray-800);
+      &:hover {
+        background-color: var(--gray-100);
+      }
+      .chevron {
+        background: var(--gray-800) url("images/icon-chevron-down.svg") center center/12px 12px no-repeat;
+      }
+    }
+    .newsletter-box {
+      background-color: var(--gray-800);
+      h3 {
+        color: var(--standard-color);
       }
     }
   }
-  .discover-more-btn-chevron {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--standard-color);
-    border-radius: 50%;
-    box-shadow: var(--small-shadow-1), var(--small-shadow-2);
-    display: flex;
-    height: 44px;
-    justify-content: center;
-  }
-  &:hover {
-    color: var(--primary);
-  }
-  img {
-    height: 16px;
-    width: 12px;
-  }
-  span {
-    margin-left: 1rem;
-  }
-}
 
-.phone-display {
-  grid-column: 3 / 6;
-  position: relative;
-  height: 688px;
-  overflow: hidden;
-  img {
-    position: absolute;
+  /* ------------------------------ */
+  
+  *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  .image-phone-creditcard {
-    right: 0;
-    z-index: 5;
-  }
-  .image-phone-mybudget {
-    right: 240px;
-    top: 135px;
-    z-index: 4;
-  }
-}
-
-/* Second section: App Features */
-
-
-.logo-ipsum {
-  display: flex;
-  gap: .5rem;
-  justify-content: space-between;
-  margin: 0 auto 7rem auto;
-  max-width: 1296px;
-  width: 100%;
-  img {
-    border: 1px solid var(--gray-300);
-    border-radius: 8px;
-    padding: 2rem 2.15rem;
-  }
-}
-
-.app-features-description {
-  margin-bottom: 4.188rem;
-  p {
-    color: var(--gray-600);
-    font-size: var(--l-text);
-  }
-}
-
-.app-features {
-  .tron-city {
-    color: var(--gray-700);
-    grid-template-columns: 1fr 1fr 1fr; /* minmax(0, 1fr) */
-  }
-}
-
-.app-features-flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 7rem;
-}
-
-.app-features-right {
-  max-width: 746px;
-  h2 {
-    margin-bottom: .813rem;
-  }
-  .tron-city {
-    align-items: center;
-    gap: 3rem;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.app-features-container {
-  display: flex;
-  width: 345px;
-  h5 {
-    margin-bottom: .75rem;
-  }
-  .app-features-icon {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--gray-100);
-    border-radius: var(--border-radius-l);
-    display: flex;
-    height: 60px;
-    justify-content: center;
-    margin-right: 1.5rem;
-    img {
-      aspect-ratio: 1;
-      height: 28px;
-    }
-  }
-}
-
-/* Third Section: How Does It Work? */
-
-.how-does-it-work {
-  padding-block: 6rem;
-  text-align: center;
-  h2 {
-    margin-bottom: 3rem;
-  }
-  img {
-    margin-bottom: 2.5rem;
-  }
-  img + img {
-    margin-left: 6.25rem;
-  }
-  h4 {
-    margin-bottom: .75rem;
-  }
-  p {
-    margin: 0 auto;
-    width: 636px;
-  }
-}
-
-
-/* Fourth section: Transfer Simple and Clear */
-
-.transfer-simple {
-  .btn-learn-more {
-    align-items: center;
-    background-color: var(--primary);
-    border-radius: var(--border-radius-m);
-    color: var(--standard-color);
-    display: flex;
-    height: 44px;
-    justify-content: center;
-    text-decoration: none;
-    width: 159px;
-    &:hover {
-      background-color: var(--standard-color);
-      border: 1px solid var(--primary);
-      color: var(--primary);
-      text-decoration: none;
-      img {
-        /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
-        filter: brightness(0) saturate(100%) invert(38%) sepia(91%) saturate(2677%) hue-rotate(225deg) brightness(98%) contrast(92%);
-      }
-    }
-  }
-  .container {
-    margin-block: 7rem;
-  }
-}
-
-.transfer-simple-clear {
-  align-items: center;
-  display: flex;
-}
-
-.transfer-simple-clear .content{
-  h2 {
-    margin-bottom: 2rem;
-    max-width: 416px;
-  }
-  margin: 0 auto;
-  max-width: 1076px;
-  ul {
-    list-style: none;
-    li{
-      padding-left: 1.75rem;
-      background: url("images/icon-check-circle.svg") no-repeat center left 0;
-    }
-    li + li {
-      margin-top: .75rem;;
-    }
-    margin-bottom: 2.5rem;
-  }
-}
-
-.transfer-simple-payment {
-  align-items: center;
-  display: flex;
-  h2 {
-    margin-bottom: 2.5rem;
-    max-width: 526px;
-  }
-  .transfer-simple-payment-flex {
-    display: flex;
-    margin-bottom: 2.5rem;
-  }
-}
-
-.transfer-simple-payment-container + .transfer-simple-payment-container {
-  margin-left: 2.5rem;
-}
-
-.transfer-simple-payment-container {
-  width: 243px;
-  .transfer-simple-icon {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--gray-100);
-    border-radius: var(--border-radius-l);
-    display: flex;
-    height: 60px;
-    justify-content: center;
-    margin-bottom: 1rem;
-    img {
-      aspect-ratio: 1;
-      height: 28px;
-    }
-  }
-}
-
-/* Fifth section: Testimonial */
-
-.testimonial {
-  padding-block: 5rem;
-  h2 {
-    font-size: var(--heading1);
+  
+  h1,h2,h3,h4,h5,h6 {
+    color: var(--gray-900);
+    font-weight: 800;
     text-wrap: balance;
-    width: 306px;
   }
-  .container {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
+  
+  h1 {font-size: var(--heading1); line-height: 1.3;}
+  h2 {font-size: var(--heading2); line-height: 1.3;}
+  h3 {font-size: var(--heading3); line-height: 1.3;}
+  h4 {font-size: var(--heading4); line-height: 1.4;}
+  h5 {font-size: var(--heading5); line-height: 1.4;}
+  h6 {font-size: var(--heading6); line-height: 1.4;}
+  
+  .display1 {font-size: var(--display1); font-weight: 800; line-height: 1.3;}
+  .display2 {font-size: var(--display2); font-weight: 800; line-height: 1.3;}
+  .display3 {font-size: var(--display3); font-weight: 800; line-height: 1.3;}
+  .display4 {font-size: var(--display4); font-weight: 800; line-height: 1.3;}
+  .display5 {font-size: var(--display5); font-weight: 800; line-height: 1.3;}
+  .display6 {font-size: var(--display6); font-weight: 800; line-height: 1.3;}
+  
+  html {
+    /* Adds padding so scroll-behavior stops with some margin from browser top view edge */
+    scroll-padding: 2rem;
+    /* Smoother scroll */
+    scroll-behavior: smooth;
   }
-}
-
-.testimonial-client {
-  background-color: var(--standard-color);
-  border-radius: var(--border-radius-l);
-  box-shadow: var(--large-shadow-1, --large-shadow-2);
-  padding: 1.5rem 1.5rem 2rem 1.5rem;
-  position: relative;
-  &::before {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--primary);
-    background: var(--primary) url("images/icon-quote.svg") center center/18px 18px no-repeat;
-    border-radius: var(--border-radius-m);
-    box-shadow: var(--medium-shadow-1);
-    content: url("");
-    color: var(--standard-color);
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    left: 24px;
-    position: absolute;
-    top: -20px;
-  }
-  h3 {
-    font-size: 1rem;
-  }
-  h4 {
-    color: var(--gray-600);
-    font-size: var(--s-text);
-    font-weight: 400;
-    line-height: 1;
-  }
-  .head {
-    margin-right: 1rem;
-  }
-  .rating {
-    margin-block: 1.5rem;
-  }
-  .text {
+  
+  body {
     color: var(--gray-700);
-    margin-bottom: 1.5rem;
+    font-family: "Manrope", sans-serif;
+    line-height: 1.6;
   }
-  .person {
-    align-items: center;
-    display: flex;
-  }
-}
-
-/* Sixth section: FAQ */
-
-
-.faq-and-newsletter {
-  padding-block: 7rem;
+  
   .container {
+    margin: 0 auto;
+    max-width: 1296px;
+    padding-inline: 1rem;
+    width: 100%;
+  }
+  
+  section:nth-child(2n+3) {
+    /* Applying background-color on every second section with a offset/start on the third section. */
+    background-color: var(--gray-100);
+  }
+  
+  /* The Grid */
+  
+  .tron-city {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
   }
-}
-
-.faq-and-newsletter-left {
-  font-size: var(--l-text);
-  h2 {
-    margin-bottom: 2rem;
-  }
-  p {
-    margin-top: .5rem;
-    margin-bottom: 2.5rem;
-    max-width: 416px;
-  }
-}
-
-.faq-and-newsletter-contact {
-  display: flex;
-}
-
-.faq-and-newsletter-contact-phone + .faq-and-newsletter-contact-chat {
-  margin-left: 1.5rem;
-}
-
-.faq-and-newsletter-contact-phone, .faq-and-newsletter-contact-chat {
-  border: 1px solid var(--gray-300);
-  border-radius: var(--border-radius-l);
-  color: var(--gray-700);
-  font-size: var(--s-text);
-  min-height: 166px;
-  padding: 1.5rem;
-  width: 196px;
-  a {
+  
+  /* First section: Manage One App */
+  
+  nav {
     align-items: center;
     display: flex;
-    font-weight: 600;
-    text-decoration: none;
-    &:hover {
+    justify-content: space-between;
+    padding-block: 1rem;
+    width: 100%;
+    a {
+      color: var(--gray-800);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--primary);
       text-decoration: underline;
     }
-    img {
+  }
+  
+  .main-menu-left a {
+    margin-left: 3rem;
+  }
+  
+  .main-menu-left, .main-menu-right {
+    align-items: center;
+    display: flex;
+  }
+  
+  /* Slider/Switch credit W3Schools: https://www.w3schools.com/howto/howto_css_switch.asp */
+
+  .dark-mode-switch-span {
+    color: var(--gray-700);
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+  
+  .switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 46px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    background-color: var(--gray-600);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    -webkit-transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: var(--standard-color);
+    bottom: 2px;
+    content: "";
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    width: 20px;
+    transition: .4s;
+    -webkit-transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--primary);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    -webkit-transform: translateX(22px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .btn-signin {
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: var(--border-radius-m);
+    color: var(--standard-color);
+    display: flex;
+    font-size: var(--s-text);
+    font-weight: 600;
+    height: 36px;
+    line-height: 1.8;
+    justify-content: center;
+    margin-left: 2rem;
+    text-decoration: none;
+    width: 140px;
+    span {
       margin-left: .5rem;
     }
   }
-}
-
-.faq-and-newsletter-contact-chat a {
-  color: var(--primary);
-}
-
-.faq-and-newsletter-contact-chat a {
-  color: var(--success);
-  margin-bottom: 1rem;
-}
-
-.accordion {
-  align-items: center;
-  background-color: var(--standard-color);
-  border: none;
-  border-radius: var(--border-radius-l);
-  box-shadow: var(--small-shadow-1), var(--small-shadow-2);
-  color: var(--gray-900);
-  cursor: pointer;
-  display: flex;
-  font-weight: 600;
-  justify-content: space-between;
-  margin-top: 1rem;
-  outline: none;
-  padding: 1.313rem;
-  width: 100%;
-  &:hover {
-    background-color: var(--gray-100);
+  
+  .btn-signin:hover {
+    background-color: var(--standard-color);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    img {
+      /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
+      filter: brightness(0) saturate(100%) invert(38%) sepia(91%) saturate(2677%) hue-rotate(225deg) brightness(98%) contrast(92%);
+    }
   }
-  .chevron {
+  
+  .manage-one-app {
+    background: #4C82F7;
+    background: rgb(99,102,241);
+    background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+    margin-bottom: 6rem;
+    padding-top: 7rem;
+  }
+  
+  .one-app-explanation {
+    font-size: 1.125rem;
+    grid-column: 1 / 3;
+    position: relative;
+    text-wrap: balance;
+    .display4 {
+      margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 3rem;
+    }
+    a + a {
+      margin-left: 1.5rem;
+    }
+  }
+  
+  .discover-more-btn {
     align-items: center;
-    aspect-ratio: 1;
-    background: var(--gray-100) url("images/icon-chevron-down.svg") center center/12px 12px no-repeat;
-    border-radius: 50%;
-    display: flex;
-    height: 36px;
-    justify-content: center;
-  }
-}
-
-/* Got the idea to use the :has selector from here, credit: https://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector */
-
-.accordion-container:has(.accordion.active) {
-  border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
-  box-shadow: var(--small-shadow-1), var(--small-shadow-2);
-}
-
-.accordion.active {
-  border-radius: var(--border-radius-l) var(--border-radius-l) 0 0;
-  box-shadow: none;
-  .chevron {
-    align-items: center;
-    aspect-ratio: 1;
-    background: var(--primary) url("images/icon-chevron-up.svg") center center/12px 12px no-repeat;
-    border-radius: 50%;
-    box-shadow: var(--brand-btn);
-    display: flex;
-    height: 36px;
-    justify-content: center;
-  }
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
-  color: var(--gray-700);
-  display: none;
-  font-size: var(--s-text);
-  overflow: hidden;
-  padding: 1.125rem 1.313rem;
-}
-
-.newsletter-box {
-  align-items: center;
-  background-color: var(--gray-100);
-  border-radius: var(--border-radius-l);
-  display: flex;
-  margin: 7rem auto 0 auto;
-  padding: 5rem;
-  width: 100%;
-  img {
-    margin-right: 2rem;
-  }
-  input {
-    background: url("images/icon-envelope.svg") no-repeat center left 16px;
-    background-color: white;
-    background-size: 20px;
-    border: 1px solid var(--gray-500);
-    border-radius: var(--border-radius-l) 0 0 var(--border-radius-l);
-    color: var(--gray-500);
-    font-size: var(--m-text);
-    height: 52px;
-    max-width: 300px;
-    padding: .75rem .75rem .75rem 3rem;
-  }
-  form {
-    display: flex;
-  }
-  .btn-subscribe {
-    background-color: var(--primary);
-    border: none;
-    border-radius: 0 var(--border-radius-l) var(--border-radius-l) 0;
-    color: var(--standard-color);
+    bottom: 4rem;
+    color: var(--gray-700);
     cursor: pointer;
-    font-size: var(--m-text);
+    display: flex;
+    font-size: var(--s-text);
+    position: absolute;
+    text-decoration: none;
+    &:hover {
+      .discover-more-btn-chevron {
+        background-color: var(--primary);
+        img {
+          /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
+          filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4488%) hue-rotate(138deg) brightness(116%) contrast(105%);
+        }
+      }
+    }
+    .discover-more-btn-chevron {
+      align-items: center;
+      aspect-ratio: 1;
+      background-color: var(--standard-color);
+      border-radius: 50%;
+      box-shadow: var(--small-shadow-1), var(--small-shadow-2);
+      display: flex;
+      height: 44px;
+      justify-content: center;
+    }
+    &:hover {
+      color: var(--primary);
+    }
+    img {
+      height: 16px;
+      width: 12px;
+    }
+    span {
+      margin-left: 1rem;
+    }
+  }
+  
+  .phone-display {
+    grid-column: 3 / 6;
+    position: relative;
+    height: 688px;
+    overflow: hidden;
+    img {
+      position: absolute;
+    }
+    .image-phone-creditcard {
+      right: 0;
+      z-index: 5;
+    }
+    .image-phone-mybudget {
+      right: 240px;
+      top: 135px;
+      z-index: 4;
+    }
+  }
+  
+  /* Second section: App Features */
+  
+  
+  .logo-ipsum {
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+    margin: 0 auto 7rem auto;
+    max-width: 1296px;
+    width: 100%;
+    img {
+      border: 1px solid var(--gray-300);
+      border-radius: 8px;
+      padding: 2rem 2.15rem;
+    }
+  }
+  
+  .app-features-description {
+    margin-bottom: 4.188rem;
+    p {
+      color: var(--gray-600);
+      font-size: var(--l-text);
+    }
+  }
+  
+  .app-features {
+    .tron-city {
+      color: var(--gray-700);
+      grid-template-columns: 1fr 1fr 1fr; /* minmax(0, 1fr) */
+    }
+  }
+  
+  .app-features-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+  }
+  
+  .app-features-right {
+    max-width: 746px;
+    h2 {
+      margin-bottom: .813rem;
+    }
+    .tron-city {
+      align-items: center;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .app-features-container {
+    display: flex;
+    width: 345px;
+    h5 {
+      margin-bottom: .75rem;
+    }
+    .app-features-icon {
+      align-items: center;
+      aspect-ratio: 1;
+      background-color: var(--gray-100);
+      border-radius: var(--border-radius-l);
+      display: flex;
+      height: 60px;
+      justify-content: center;
+      margin-right: 1.5rem;
+      img {
+        aspect-ratio: 1;
+        height: 28px;
+      }
+    }
+  }
+  
+  /* Third Section: How Does It Work? */
+  
+  .how-does-it-work {
+    padding-block: 6rem;
+    text-align: center;
+    h2 {
+      margin-bottom: 3rem;
+    }
+    img {
+      margin-bottom: 2.5rem;
+    }
+    img + img {
+      margin-left: 6.25rem;
+    }
+    h4 {
+      margin-bottom: .75rem;
+    }
+    p {
+      margin: 0 auto;
+      width: 636px;
+    }
+  }
+  
+  
+  /* Fourth section: Transfer Simple and Clear */
+  
+  .transfer-simple {
+    .btn-learn-more {
+      align-items: center;
+      background-color: var(--primary);
+      border-radius: var(--border-radius-m);
+      color: var(--standard-color);
+      display: flex;
+      height: 44px;
+      justify-content: center;
+      text-decoration: none;
+      width: 159px;
+      &:hover {
+        background-color: var(--standard-color);
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        text-decoration: none;
+        img {
+          /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
+          filter: brightness(0) saturate(100%) invert(38%) sepia(91%) saturate(2677%) hue-rotate(225deg) brightness(98%) contrast(92%);
+        }
+      }
+    }
+    .container {
+      margin-block: 7rem;
+    }
+  }
+  
+  .transfer-simple-clear {
+    align-items: center;
+    display: flex;
+  }
+  
+  .transfer-simple-clear .content{
+    h2 {
+      margin-bottom: 2rem;
+      max-width: 416px;
+    }
+    margin: 0 auto;
+    max-width: 1076px;
+    ul {
+      list-style: none;
+      li{
+        padding-left: 1.75rem;
+        background: url("images/icon-check-circle.svg") no-repeat center left 0;
+      }
+      li + li {
+        margin-top: .75rem;;
+      }
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  .transfer-simple-payment {
+    align-items: center;
+    display: flex;
+    h2 {
+      margin-bottom: 2.5rem;
+      max-width: 526px;
+    }
+    .transfer-simple-payment-flex {
+      display: flex;
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  .transfer-simple-payment-container + .transfer-simple-payment-container {
+    margin-left: 2.5rem;
+  }
+  
+  .transfer-simple-payment-container {
+    width: 243px;
+    .transfer-simple-icon {
+      align-items: center;
+      aspect-ratio: 1;
+      background-color: var(--gray-100);
+      border-radius: var(--border-radius-l);
+      display: flex;
+      height: 60px;
+      justify-content: center;
+      margin-bottom: 1rem;
+      img {
+        aspect-ratio: 1;
+        height: 28px;
+      }
+    }
+  }
+  
+  /* Fifth section: Testimonial */
+  
+  .testimonial {
+    padding-block: 5rem;
+    h2 {
+      font-size: var(--heading1);
+      text-wrap: balance;
+      width: 306px;
+    }
+    .container {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  .testimonial-client {
+    background-color: var(--standard-color);
+    border-radius: var(--border-radius-l);
+    box-shadow: var(--large-shadow-1, --large-shadow-2);
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    position: relative;
+    &::before {
+      align-items: center;
+      aspect-ratio: 1;
+      background-color: var(--primary);
+      background: var(--primary) url("images/icon-quote.svg") center center/18px 18px no-repeat;
+      border-radius: var(--border-radius-m);
+      box-shadow: var(--medium-shadow-1);
+      content: url("");
+      color: var(--standard-color);
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      left: 24px;
+      position: absolute;
+      top: -20px;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    h4 {
+      color: var(--gray-600);
+      font-size: var(--s-text);
+      font-weight: 400;
+      line-height: 1;
+    }
+    .head {
+      margin-right: 1rem;
+    }
+    .rating {
+      margin-block: 1.5rem;
+    }
+    .text {
+      color: var(--gray-700);
+      margin-bottom: 1.5rem;
+    }
+    .person {
+      align-items: center;
+      display: flex;
+    }
+  }
+  
+  /* Sixth section: FAQ */
+  
+  
+  .faq-and-newsletter {
+    padding-block: 7rem;
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .faq-and-newsletter-left {
+    font-size: var(--l-text);
+    h2 {
+      margin-bottom: 2rem;
+    }
+    p {
+      margin-top: .5rem;
+      margin-bottom: 2.5rem;
+      max-width: 416px;
+    }
+  }
+  
+  .faq-and-newsletter-contact {
+    display: flex;
+  }
+  
+  .faq-and-newsletter-contact-phone + .faq-and-newsletter-contact-chat {
+    margin-left: 1.5rem;
+  }
+  
+  .faq-and-newsletter-contact-phone, .faq-and-newsletter-contact-chat {
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-l);
+    color: var(--gray-700);
+    font-size: var(--s-text);
+    min-height: 166px;
+    padding: 1.5rem;
+    width: 196px;
+    a {
+      align-items: center;
+      display: flex;
+      font-weight: 600;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      img {
+        margin-left: .5rem;
+      }
+    }
+  }
+  
+  .faq-and-newsletter-contact-chat a {
+    color: var(--primary);
+  }
+  
+  .faq-and-newsletter-contact-chat a {
+    color: var(--success);
+    margin-bottom: 1rem;
+  }
+  
+  .accordion {
+    align-items: center;
+    background-color: var(--standard-color);
+    border: none;
+    border-radius: var(--border-radius-l);
+    box-shadow: var(--small-shadow-1), var(--small-shadow-2);
+    color: var(--gray-900);
+    cursor: pointer;
+    display: flex;
     font-weight: 600;
-    height: 52px;
-    padding: .813rem 2rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+    outline: none;
+    padding: 1.313rem;
+    width: 100%;
+    &:hover {
+      background-color: var(--gray-100);
+    }
+    .chevron {
+      align-items: center;
+      aspect-ratio: 1;
+      background: var(--gray-100) url("images/icon-chevron-down.svg") center center/12px 12px no-repeat;
+      border-radius: 50%;
+      display: flex;
+      height: 36px;
+      justify-content: center;
+    }
   }
-  .newsletter-envelope {
-    fill: var(--standard-color);
+  
+  /* Got the idea to use the :has selector from here, credit: https://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector */
+  
+  .accordion-container:has(.accordion.active) {
+    border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+    box-shadow: var(--small-shadow-1), var(--small-shadow-2);
   }
-}
-
-/* Bottom */
-
-footer {
-  color: var(--gray-600);
-  text-align: center;
-  padding-block: 3rem;
-  p {
-    margin: 0;
+  
+  .accordion.active {
+    border-radius: var(--border-radius-l) var(--border-radius-l) 0 0;
+    box-shadow: none;
+    .chevron {
+      align-items: center;
+      aspect-ratio: 1;
+      background: var(--primary) url("images/icon-chevron-up.svg") center center/12px 12px no-repeat;
+      border-radius: 50%;
+      box-shadow: var(--brand-btn);
+      display: flex;
+      height: 36px;
+      justify-content: center;
+    }
   }
-}
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+    color: var(--gray-700);
+    display: none;
+    font-size: var(--s-text);
+    overflow: hidden;
+    padding: 1.125rem 1.313rem;
+  }
+  
+  .newsletter-box {
+    align-items: center;
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius-l);
+    display: flex;
+    margin: 7rem auto 0 auto;
+    padding: 5rem;
+    width: 100%;
+    img {
+      margin-right: 2rem;
+    }
+    input {
+      background: url("images/icon-envelope.svg") no-repeat center left 16px;
+      background-color: white;
+      background-size: 20px;
+      border: 1px solid var(--gray-500);
+      border-radius: var(--border-radius-l) 0 0 var(--border-radius-l);
+      color: var(--gray-500);
+      font-size: var(--m-text);
+      height: 52px;
+      max-width: 300px;
+      padding: .75rem .75rem .75rem 3rem;
+    }
+    form {
+      display: flex;
+    }
+    .btn-subscribe {
+      background-color: var(--primary);
+      border: none;
+      border-radius: 0 var(--border-radius-l) var(--border-radius-l) 0;
+      color: var(--standard-color);
+      cursor: pointer;
+      font-size: var(--m-text);
+      font-weight: 600;
+      height: 52px;
+      padding: .813rem 2rem;
+    }
+    .newsletter-envelope {
+      fill: var(--standard-color);
+    }
+  }
+  
+  /* Bottom */
+  
+  footer {
+    color: var(--gray-600);
+    text-align: center;
+    padding-block: 3rem;
+    p {
+      margin: 0;
+    }
+  }

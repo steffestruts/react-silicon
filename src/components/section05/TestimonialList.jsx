@@ -12,6 +12,10 @@ const TestimonialList = () => {
 
     fetchData();
   }, []);
+
+  const starsMax = 5;
+  const starsFill = starsMax;
+  const starsEmpty = 0;
     
   return (
       <div className="container">
@@ -19,10 +23,16 @@ const TestimonialList = () => {
         {testimonialData.map((testimonial) => (
           <div className="testimonial-client" key={testimonial.id}>
             <div className="rating">{testimonial.starRating}</div>
+{/* 
+
+
+            {/* <i className="fa-solid fa-star"></i> */}
+            {/* <i class="fa-regular fa-star"></i> */}
+
             <p className='text'>{testimonial.comment}</p>
             <div className="person">
               <div className="head">
-                <img src={testimonial.avatarUrl} alt={testimonial.avatarUrl} />
+                <img src={testimonial.avatarUrl} alt={testimonial.author} />
               </div>
               <div className="name">
                 <h3>{testimonial.author}</h3>

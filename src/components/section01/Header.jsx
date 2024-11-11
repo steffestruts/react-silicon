@@ -1,21 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Navigation = () => {
+const Header = () => {
+  const [isDarkMode, setIsDarkMode] = useState (false);
+
+  useEffect(() => {
+    const storedThemeMode = localStorage.getItem('themeMode')
+
+    if (storedThemeMode === 'dark' || (!storedThemeMode && window.matchMedia('prefers-color-scheme: dark').matches)) {
+      setIsDarkMode(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove('dark');
+    }
+
+  }, []);
+  
+  const toggleDarkMode = () => {
+    if (isDarkMode) {
+      setIsDarkMode(false);
+      localStorage.setItem('themedMode', 'light');
+      document.documentElement.classList.remove('dark');
+    } else {
+      setIsDarkMode(true);
+      localStorage.setItem('themedMode', 'light');
+      document.documentElement.classList.add('dark');
+    }
+  };
+
   return (
     <header>
       <div className="container">
         <nav className="main-menu" aria-label="main navigation">
           <div className="main-menu-left">
-            <img src="images/logo-solid.svg" alt="Silicon Logotype" />
+            <img src={isDarkMode ? 'images/dark-logo-solid.svg' : 'images/logo-solid.svg'} alt="Silicon Logotype" />
             <a href="#">Features</a>
+            {/* Didn't do this part, only made a link to other page */}
             <a href="#">Contact</a>
           </div>
           <div className="main-menu-right">
             <div className="dark-mode-switch">
               <span className="dark-mode-switch-span">Dark Mode</span>
-              <label className="switch">
-                <input id="darkModeSwitch" type="checkbox"/>
-                {/* <input id="darkModeSwitch" type="checkbox" onChange="toggleDarkMode()"/> */}
+              <label className="switch" aria-label="darkmode switch">
+                <input id="darkModeSwitch" type="checkbox" checked={isDarkMode} onChange={toggleDarkMode}/>
                 <span className="slider round"></span>
               </label>
             </div>
@@ -27,7 +54,7 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default Header
 
 
 

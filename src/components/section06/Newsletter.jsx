@@ -10,8 +10,6 @@ const Newsletter = () => {
           <input type="email" id="email" placeholder="Your Email" pattern=".+@example\.com" size="30" required />
           <button className="btn-subscribe">Subscribe</button>
         </form>
-        
-        
       </div>
     </div>
   )

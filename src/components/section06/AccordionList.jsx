@@ -12,13 +12,18 @@ const AccordionList = () => {
 
     fetchData();
   }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  }
     
   return (
-    
     <div className="faq-and-newsletter-accordion">
         {accordionData.map((faq, index) => (
           <div className="accordion-container"  key={faq.id}>
-            <button className="accordion">{faq.title}<div className="chevron"></div></button>
+            <button className="accordion" onClick={toggleAccordion}>{faq.title}<div className="chevron"></div></button>
             <div className="panel"><p>{faq.content}</p></div>
           </div>
         ))}

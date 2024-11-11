@@ -1,6 +1,6 @@
 import './assets/css/styles.css'
-import Navigation from './components/section01/Navigation'
-import OneAppExplanation from './components/section01/OneAppExplanation'
+import Header from './components/section01/Header'
+import Hero from './components/section01/Hero'
 import AppFeatures from './components/section02/AppFeatures'
 import HowDoesItWork from './components/section03/HowDoesItWork'
 import TransferSimple from './components/section04/TransferSimple'
@@ -13,9 +13,9 @@ function App() {
 
   return (
     <>
-      <Navigation />
+      <Header />
       <main>
-        <OneAppExplanation />
+        <Hero />
         <AppFeatures />
         <HowDoesItWork />
         <TransferSimple />

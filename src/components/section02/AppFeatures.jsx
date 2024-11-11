@@ -1,17 +1,11 @@
 import React from 'react'
+import Brands from './Brands'
 
 const AppFeatures = () => {
   return (
     <section className="app-features" aria-label="App Features" id="app-features">
       <div className="container">
-        <div className="logo-ipsum">
-          <img src="images/logo-logoipsum-01.svg" alt="logoipsum 1" />
-          <img src="images/logo-logoipsum-02.svg" alt="logoipsum 2" />
-          <img src="images/logo-logoipsum-03.svg" alt="logoipsum 3" />
-          <img src="images/logo-logoipsum-04.svg" alt="logoipsum 4" />
-          <img src="images/logo-logoipsum-05.svg" alt="logoipsum 5" />
-          <img src="images/logo-logoipsum-06.svg" alt="logoipsum 6" />
-        </div>
+        <Brands />
         <div className="app-features-flex">
           <div className="app-features-left">
             <img src="images/app-features-phone.svg" alt="phone visa card" />

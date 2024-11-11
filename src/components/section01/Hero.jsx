@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const OneAppExplanation = () => {
+const Hero = () => {
+  const [isDarkMode, setIsDarkMode] = useState (false);
+  
   return (
     <section className="manage-one-app">
       <div className="container">
@@ -9,7 +11,8 @@ const OneAppExplanation = () => {
             <div className="one-app-explanation-content">
               <h1 className="display4">Manage All Your Money in One App</h1>
               <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
-              <a href="#"><img src="images/button-appstore.svg" alt="button apple appstore" /></a><a href="#"><img src="images/button-googleplay.svg" alt="button google playstore" /></a>
+              <a href="#"><img src={isDarkMode ? 'images/dark-button-appstore.svg' : 'images/button-appstore.svg'} alt="App Store Logotype" /></a>
+              <a href="#"><img src={isDarkMode ? 'images/dark-button-googleplay.svg' : 'images/button-googleplay.svg'} alt="Google Play Logotype" /></a>
             </div>
             <a href="#app-features" className="discover-more-btn">
               <div className="discover-more-btn-chevron"><img src="images/icon-chevron-down.svg" alt="chevron down" /></div>
@@ -26,4 +29,4 @@ const OneAppExplanation = () => {
   )
 }
 
-export default OneAppExplanation
+export default Hero

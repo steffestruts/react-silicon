@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import AccordionList from './AccordionList'
 
 const FAQ = () => {
+
+  const [TestimonialList, setTestimonialList] = useState([]);
+
+  useEffect (() => {
+
+  }, []);
+
   return (
     <section className='faq-and-newsletter' aria-label="FAQ And Newsletter">
       <div className="container">
