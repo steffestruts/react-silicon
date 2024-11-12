@@ -19,11 +19,11 @@ const Header = () => {
   const toggleDarkMode = () => {
     if (isDarkMode) {
       setIsDarkMode(false);
-      localStorage.setItem('themedMode', 'light');
+      localStorage.setItem('themeMode', 'light');
       document.documentElement.classList.remove('dark');
     } else {
       setIsDarkMode(true);
-      localStorage.setItem('themedMode', 'light');
+      localStorage.setItem('themeMode', 'light');
       document.documentElement.classList.add('dark');
     }
   };

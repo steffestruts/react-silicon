@@ -13,6 +13,7 @@ const AccordionList = () => {
     fetchData();
   }, []);
 
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {

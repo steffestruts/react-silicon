@@ -1,3 +1,4 @@
+import StarRating from './StarRating'
 import React, { useEffect, useState } from 'react';
 
 const TestimonialList = () => {
@@ -12,23 +13,13 @@ const TestimonialList = () => {
 
     fetchData();
   }, []);
-
-  const starsMax = 5;
-  const starsFill = starsMax;
-  const starsEmpty = 0;
     
   return (
       <div className="container">
         <h2>Clients are Loving Our App</h2>
         {testimonialData.map((testimonial) => (
           <div className="testimonial-client" key={testimonial.id}>
-            <div className="rating">{testimonial.starRating}</div>
-{/* 
-
-
-            {/* <i className="fa-solid fa-star"></i> */}
-            {/* <i class="fa-regular fa-star"></i> */}
-
+            <div className="rating"><StarRating starRating={testimonial.starRating} /></div>
             <p className='text'>{testimonial.comment}</p>
             <div className="person">
               <div className="head">

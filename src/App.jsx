@@ -10,7 +10,6 @@ import Newsletter from './components/section06/Newsletter'
 import Footer from './components/section07/Footer'
 
 function App() {
-
   return (
     <>
       <Header />

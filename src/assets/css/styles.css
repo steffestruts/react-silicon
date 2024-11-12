@@ -87,14 +87,39 @@
         color: var(--gray-100);
       }
     }
+    .discover-more-btn {
+      .discover-more-btn-chevron {
+        background-color: rgba(255, 255, 255, 0.1);
+        img {
+          /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
+          filter: brightness(0) invert(1);
+        }
+        &::hover {
+          background-color: var(--primary);
+          img {
+            /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
+            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4488%) hue-rotate(138deg) brightness(116%) contrast(105%);
+          }
+        }
+      }
+    }
+    .transfer-simple-payment-container > .transfer-simple-icon,
     .app-features-container > .app-features-icon {
       background-color: rgba(99, 102, 241, .08);
     }
+    .transfer-simple-clear .content{
+        color: var(--standard-color);
+      }
     .testimonial-client {
       background-color: var(--gray-900);
       color: var(--standard-color);
       p {
         color: var(--standard-color);
+      }
+    }
+    .logo-ipsum {
+      img {
+        border-color: rgba(226, 229, 241, .15);
       }
     }
     .faq-and-newsletter-contact-phone, .faq-and-newsletter-contact-chat {
@@ -291,7 +316,7 @@
   }
   
   .btn-signin:hover {
-    background-color: var(--standard-color);
+    background-color: transparent;
     border: 1px solid var(--primary);
     color: var(--primary);
     text-decoration: none;
@@ -494,7 +519,7 @@
       text-decoration: none;
       width: 159px;
       &:hover {
-        background-color: var(--standard-color);
+        background-color: transparent;
         border: 1px solid var(--primary);
         color: var(--primary);
         text-decoration: none;
@@ -621,6 +646,12 @@
     }
     .rating {
       margin-block: 1.5rem;
+      .fa-solid {
+        color: var(--warning)
+      }
+      .fa-regular {
+        color: var(--gray-500)
+      }
     }
     .text {
       color: var(--gray-700);
