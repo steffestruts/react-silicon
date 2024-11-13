@@ -1,10 +1,10 @@
 import React from 'react'
-import TestimonialList from './TestimonialList'
+import TestimonialClient from './TestimonialClient'
 
 const Testimonial = () => {
   return (
     <section className="testimonial" aria-label="Our Clients">
-      <TestimonialList/>
+      <TestimonialClient/>
     </section>
   )
 }

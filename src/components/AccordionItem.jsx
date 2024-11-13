@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-const AccordionList = () => {
+const AccordionItem = () => {
   const [accordionData, setAccordionData] = useState([]);
 
   useEffect(() => {
@@ -12,24 +12,18 @@ const AccordionList = () => {
 
     fetchData();
   }, []);
-
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  }
     
   return (
     <div className="faq-and-newsletter-accordion">
-        {accordionData.map((faq, index) => (
-          <div className="accordion-container"  key={faq.id}>
-            <button className="accordion" onClick={toggleAccordion}>{faq.title}<div className="chevron"></div></button>
-            <div className="panel"><p>{faq.content}</p></div>
+        {accordionData.map((item, index) => (
+          <div className="accordion"  key={item.id}>
+            <strong>{item.title}</strong>
+            <br />
+            <div className="panel"><p>{item.content}</p></div>
           </div>
         ))}
     </div>
   )
 }
 
-export default AccordionList
+export default AccordionItem

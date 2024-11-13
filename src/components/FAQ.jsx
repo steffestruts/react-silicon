@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import AccordionList from './AccordionList'
+import AccordionItem from './AccordionItem'
 
 const FAQ = () => {
 
@@ -36,7 +36,7 @@ const FAQ = () => {
               </div>
             </div>
           </div>
-          <AccordionList/>
+          <AccordionItem/>
       </div>
     </section>
   )

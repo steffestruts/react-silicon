@@ -29,14 +29,13 @@ const Header = () => {
   };
 
   return (
+    <>
     <header>
       <div className="container">
         <nav className="main-menu" aria-label="main navigation">
           <div className="main-menu-left">
             <img src={isDarkMode ? 'images/dark-logo-solid.svg' : 'images/logo-solid.svg'} alt="Silicon Logotype" />
             <a href="#">Features</a>
-            {/* Didn't do this part, only made a link to other page */}
-            <a href="#">Contact</a>
           </div>
           <div className="main-menu-right">
             <div className="dark-mode-switch">
@@ -51,47 +50,31 @@ const Header = () => {
         </nav>
       </div>
     </header>
+    {/* Moved in this section because dark mode (isDarkMode in the img-tag below) didn't work as intended with images. Probably some React-state I'm not used to. */}
+    <section className="manage-one-app">
+      <div className="container">
+        <div className="tron-city">
+          <div className="one-app-explanation">
+            <div className="one-app-explanation-content">
+              <h1 className="display4">Manage All Your Money in One App</h1>
+              <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
+              <a href="#"><img src={isDarkMode ? 'images/dark-button-appstore.svg' : 'images/button-appstore.svg'} alt="App Store Logotype" /></a>
+              <a href="#"><img src={isDarkMode ? 'images/dark-button-googleplay.svg' : 'images/button-googleplay.svg'} alt="Google Play Logotype" /></a>
+            </div>
+            <a href="#app-features" className="discover-more-btn">
+              <div className="discover-more-btn-chevron"><img src="images/icon-chevron-down.svg" alt="chevron down" /></div>
+              <span>Discover more</span>
+            </a>
+          </div>
+          <div className="phone-display">
+            <img className="image-phone-creditcard" src="images/iphone12-creditcard.svg" alt="phone credit card" />
+            <img className="image-phone-mybudget" src="images/iphone12-mybudget.svg" alt="phone my budget" />
+          </div>
+        </div>
+      </div>
+    </section>
+    </>
   )
 }
 
 export default Header
-
-
-
-
-// Comment out Javascript file - Easier to find - Credit: Joakim@ECUtbildning
-
-/* const darkmodeSwitch = document.querySelector('#darkmode-switch')
-const hasDarkmode = localStorage.getItem('darkmode')
-
-if(hasDarkmode == null) {
-  if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    enableDarkMode()
-  } else {
-    disableDarkMode()
-  }
-} else if(hasDarkmode === 'on') {
-  enableDarkMode()
-} else if(hasDarkmode === 'off') {
-  disableDarkMode()
-} */
-
-
-/* darkmodeSwitch.addEventListener('change', () => {
-  if(darkmodeSwitch.checked) {
-    enableDarkMode()
-    localStorage.setItem('darkmode', 'on')
-  } else {
-    disableDarkMode()
-    localStorage.setItem('darkmode', 'off')
-  }
-})
-
-function enableDarkMode() {
-  darkmodeSwitch.checked = true
-  document.documentElement.classList.add('dark')
-}
-function disableDarkMode() {
-  darkmodeSwitch.checked = false
-  document.documentElement.classList.remove('dark')
-} */

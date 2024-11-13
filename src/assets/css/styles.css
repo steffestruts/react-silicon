@@ -111,7 +111,7 @@
         color: var(--standard-color);
       }
     .testimonial-client {
-      background-color: var(--gray-900);
+      background-color: rgba(255, 255, 255, .05);
       color: var(--standard-color);
       p {
         color: var(--standard-color);
@@ -139,6 +139,10 @@
       background-color: var(--gray-800);
       h3 {
         color: var(--standard-color);
+      }
+      input {
+        background-color: rgba(255,255,255,.02);
+        border-color: rgba(255,255,255,.1);
       }
     }
   }
@@ -663,7 +667,7 @@
     }
   }
   
-  /* Sixth section: FAQ */
+  /* Sixth section: FAQ + Accordion*/
   
   
   .faq-and-newsletter {
@@ -752,38 +756,6 @@
       height: 36px;
       justify-content: center;
     }
-  }
-  
-  /* Got the idea to use the :has selector from here, credit: https://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector */
-  
-  .accordion-container:has(.accordion.active) {
-    border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
-    box-shadow: var(--small-shadow-1), var(--small-shadow-2);
-  }
-  
-  .accordion.active {
-    border-radius: var(--border-radius-l) var(--border-radius-l) 0 0;
-    box-shadow: none;
-    .chevron {
-      align-items: center;
-      aspect-ratio: 1;
-      background: var(--primary) url("images/icon-chevron-up.svg") center center/12px 12px no-repeat;
-      border-radius: 50%;
-      box-shadow: var(--brand-btn);
-      display: flex;
-      height: 36px;
-      justify-content: center;
-    }
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
-    color: var(--gray-700);
-    display: none;
-    font-size: var(--s-text);
-    overflow: hidden;
-    padding: 1.125rem 1.313rem;
   }
   
   .newsletter-box {
