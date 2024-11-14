@@ -2,11 +2,17 @@ import React, { useEffect, useState } from 'react'
 import AccordionItem from './AccordionItem'
 
 const FAQ = () => {
+  const [accordionData, setAccordionData] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const [TestimonialList, setTestimonialList] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch ('https://win24-assignment.azurewebsites.net/api/faq');
+      const data = await res.json();
+      setAccordionData(data);
+    }
 
-  useEffect (() => {
-
+    fetchData();
   }, []);
 
   return (
@@ -36,7 +42,15 @@ const FAQ = () => {
               </div>
             </div>
           </div>
-          <AccordionItem/>
+
+
+          <div className="faq-and-newsletter-accordion">
+            {
+              accordionData.map(item => (
+                <AccordionItem key={item.id} item={item}/>
+              ))
+            }
+          </div>
       </div>
     </section>
   )

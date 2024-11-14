@@ -71,7 +71,7 @@
     --primary: #eee;
   } */
 
-  /* ------ Dark Mode ------------- */
+  /* --------------------------------------- Dark Mode Start --------------------------------------- */
 
   .dark {
     background-color: var(--gray-900);
@@ -94,7 +94,7 @@
           /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
           filter: brightness(0) invert(1);
         }
-        &::hover {
+        &:hover {
           background-color: var(--primary);
           img {
             /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
@@ -126,14 +126,27 @@
       border: 1px solid rgb(255, 255, 255, .15);
       color: var(--standard-color);
     }
-    .accordion {
-      background-color: var(--gray-800);
-      &:hover {
-        background-color: var(--gray-100);
-      }
+    .accordion-container {
+      margin-block: 1rem;
+      border: 1px solid var(--gray-600);
       .chevron {
         background: var(--gray-800) url("images/icon-chevron-down.svg") center center/12px 12px no-repeat;
       }
+    }
+    .accordion-button.open {
+      background-color: var(--gray-800);
+      color: white;
+    }
+    .accordion-button {
+      background-color: var(--gray-800);
+      color: white;
+      &.accordion-chevron {
+        background-color: rgba(255,255,255,04);
+      }
+    }
+    .accordion-container {
+      background-color: var(--gray-800);
+      color: white;
     }
     .newsletter-box {
       background-color: var(--gray-800);
@@ -142,12 +155,11 @@
       }
       input {
         background-color: rgba(255,255,255,.02);
-        border-color: rgba(255,255,255,.1);
       }
     }
   }
 
-  /* ------------------------------ */
+    /* --------------------------------------- Dark Mode End --------------------------------------- */
   
   *, ::before, ::after {
     box-sizing: border-box;
@@ -728,8 +740,14 @@
     color: var(--success);
     margin-bottom: 1rem;
   }
-  
-  .accordion {
+
+  .accordion-container {
+    background-color: var(--standard-color);
+    border-radius: var(--border-radius-l);
+    margin-block: 1rem;
+  }
+
+  .accordion-button {
     align-items: center;
     background-color: var(--standard-color);
     border: none;
@@ -740,14 +758,16 @@
     display: flex;
     font-weight: 600;
     justify-content: space-between;
-    margin-top: 1rem;
     outline: none;
     padding: 1.313rem;
     width: 100%;
-    &:hover {
-      background-color: var(--gray-100);
+    &.open {
+      .accordion-chevron {
+        background-color: var(--primary);
+        transform: rotate(180deg);
+      }
     }
-    .chevron {
+    .accordion-chevron {
       align-items: center;
       aspect-ratio: 1;
       background: var(--gray-100) url("images/icon-chevron-down.svg") center center/12px 12px no-repeat;
@@ -756,6 +776,10 @@
       height: 36px;
       justify-content: center;
     }
+  }
+  .accordion-content {
+    font-size: .875rem;
+    padding: 1rem;
   }
   
   .newsletter-box {

@@ -1,7 +1,13 @@
 import React, {useEffect, useState} from 'react'
 
-const AccordionItem = () => {
-  const [accordionData, setAccordionData] = useState([]);
+// Used teacher Hans's solution, so credit to him.
+
+const AccordionItem = ({item}) => {
+  const [isOpen, setIsOpen] = useState(null);
+
+  const accordionToggle = () => {
+    setIsOpen(!isOpen);
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -9,19 +15,18 @@ const AccordionItem = () => {
       const data = await res.json();
       setAccordionData(data);
     }
-
-    fetchData();
   }, []);
     
   return (
-    <div className="faq-and-newsletter-accordion">
-        {accordionData.map((item, index) => (
-          <div className="accordion"  key={item.id}>
-            <strong>{item.title}</strong>
-            <br />
-            <div className="panel"><p>{item.content}</p></div>
-          </div>
-        ))}
+    <div className="accordion-container">
+        <button className={`accordion-button ${isOpen ? 'open' : ''}`} onClick={accordionToggle}>{item.title}<div className="accordion-chevron"></div></button>
+        {
+          isOpen && (
+            <div className="accordion-content">
+              <p>{item.content}</p>
+            </div>
+          )
+        }
     </div>
   )
 }
