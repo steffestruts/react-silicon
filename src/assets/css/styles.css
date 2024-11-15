@@ -75,7 +75,7 @@
 
   .dark {
     background-color: var(--gray-900);
-    section:nth-child(2n+3) {
+    section:nth-child(2n+2) {
       /* Applying background-color on every second section with a offset/start on the third section. */
       background-color: black;
     }
@@ -128,10 +128,13 @@
     }
     .accordion-container {
       margin-block: 1rem;
-      border: 1px solid var(--gray-600);
-      .chevron {
-        background: var(--gray-800) url("images/icon-chevron-down.svg") center center/12px 12px no-repeat;
-      }
+      border: 1px solid var(--gray-700);
+    }
+    .accordion-container .accordion-content {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+    .accordion-container .accordion-content p {
+      color: var(--gray-500);
     }
     .accordion-button.open {
       background-color: var(--gray-800);
@@ -140,13 +143,16 @@
     .accordion-button {
       background-color: var(--gray-800);
       color: white;
-      &.accordion-chevron {
-        background-color: rgba(255,255,255,04);
-      }
+    }
+    .accordion-button .accordion-chevron {
+      background-image: url("images/dark-icon-chevron-up.svg");
     }
     .accordion-container {
       background-color: var(--gray-800);
       color: white;
+    }
+    .accordion-container  .accordion-content {
+      background-color: var(--gray-800);
     }
     .newsletter-box {
       background-color: var(--gray-800);
@@ -207,8 +213,8 @@
     width: 100%;
   }
   
-  section:nth-child(2n+3) {
-    /* Applying background-color on every second section with a offset/start on the third section. */
+  section:nth-child(2n+2) {
+    /* Applying background-color on every second section with a offset/start on the second section. */
     background-color: var(--gray-100);
   }
   
@@ -398,8 +404,8 @@
       color: var(--primary);
     }
     img {
-      height: 16px;
-      width: 12px;
+      height: 24px;
+      width: 24px;
     }
     span {
       margin-left: 1rem;
@@ -742,9 +748,20 @@
   }
 
   .accordion-container {
-    background-color: var(--standard-color);
+    background-color: white;
     border-radius: var(--border-radius-l);
+    box-shadow: var(--medium-shadow-2);
     margin-block: 1rem;
+  }
+
+  .accordion-container  .accordion-content {
+    background-color: white;
+    box-shadow: var(--medium-shadow-2);
+    padding: 1.5rem;
+  }
+
+  .accordion-button.open .accordion-chevron {
+    background: rgba(255, 255, 255, 0.1) url("images/dark-icon-chevron-up.svg") center center/24px 24px no-repeat;
   }
 
   .accordion-button {
@@ -770,7 +787,7 @@
     .accordion-chevron {
       align-items: center;
       aspect-ratio: 1;
-      background: var(--gray-100) url("images/icon-chevron-down.svg") center center/12px 12px no-repeat;
+      background: rgba(255, 255, 255, 0.1) url("images/icon-chevron-down.svg") center center/24px 24px no-repeat;
       border-radius: 50%;
       display: flex;
       height: 36px;
@@ -779,7 +796,7 @@
   }
   .accordion-content {
     font-size: .875rem;
-    padding: 1rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
   
   .newsletter-box {

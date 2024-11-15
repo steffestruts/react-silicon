@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import AccordionItem from './AccordionItem'
+import FAQContactPhone from './FAQContactPhone';
+import FAQContactChat from './FAQContactChat';
 
 const FAQ = () => {
   const [accordionData, setAccordionData] = useState([]);
@@ -23,23 +25,9 @@ const FAQ = () => {
             <p>Still have unanswered questions and need to get in touch?</p>
             <div className="faq-and-newsletter-contact">
               {/* Phone Contact */}
-              <div className="faq-and-newsletter-contact-phone">
-                <img src="images/icon-telephone.svg" alt="Telephone" />
-                <p>Still have  questions?</p>
-                <a href="#">
-                  <span>Contact us</span>
-                  <img src="images/icon-arrow-right-primary.svg" alt="arrow right" />
-                </a>
-              </div>
+              <FAQContactPhone />
               {/* Chat Contact */}
-              <div className="faq-and-newsletter-contact-chat">
-                <img src="images/icon-chat-color.svg" alt="Chat" />
-                <p>Don't like phone calls?</p>
-                <a href="#">
-                  <span>Contact us</span>
-                  <img src="images/icon-arrow-right-green.svg" alt="arrow right" />
-                </a>
-              </div>
+              <FAQContactChat />
             </div>
           </div>
 
@@ -57,3 +45,16 @@ const FAQ = () => {
 }
 
 export default FAQ
+
+
+
+
+
+
+
+
+
+
+
+
+
